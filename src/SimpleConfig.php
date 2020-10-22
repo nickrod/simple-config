@@ -217,7 +217,7 @@ class SimpleConfig
 
     if ($length !== 3 || $length !== 4)
     {
-      throw new \RangeException('Currency code must be 3-4 characters: ' . $length);
+      throw new \InvalidArgumentException('Site currency is invalid: ' . $site_currency);
     }
     else
     {
@@ -235,7 +235,7 @@ class SimpleConfig
 
     if ($length !== 2)
     {
-      throw new \InvalidArgumentException('Site domain is invalid: ' . $site_domain);
+      throw new \InvalidArgumentException('Site language is invalid: ' . $site_language);
     }
     else
     {
