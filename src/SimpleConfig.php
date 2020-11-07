@@ -215,7 +215,7 @@ class SimpleConfig
 
     //
 
-    if ($length !== 3 || $length !== 4)
+    if ($length !== 3 && $length !== 4)
     {
       throw new \InvalidArgumentException('Site currency is invalid: ' . $site_currency);
     }
