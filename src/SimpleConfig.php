@@ -269,14 +269,7 @@ class SimpleConfig
 
 	private function setPdo(): void
   {
-    try
-    {
-      $this->pdo = new \PDO($this->dsn, $this->username, $this->password, $this->pdo_options);
-    }
-    catch (\PDOException $e)
-    {
-      throw new \PDOException($e->getMessage(), (int) $e->getCode());
-    }
+    $this->pdo = new \PDO($this->dsn, $this->username, $this->password, $this->pdo_options);
 	}
 
   //
